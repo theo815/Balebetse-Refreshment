@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Balebetse Refreshment</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="images/SCmJo.jpg" alt="logo">
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="feedback.html">Feedback</a>
+    </nav>
+</header>
+
+<section class="page-title">
+    <h1>Contact Us</h1>
+    <p>We are happy to hear from you</p>
+</section>
+
+<section class="contact-container">
+
+    <div class="contact-info">
+        <h2>Location</h2>
+        <p>Gaborone, Botswana</p>
+        <p>Near Main Mall Area</p>
+
+        <h2>Contact</h2>
+        <p>+267 7123 4567</p>
+        <p>info@balebetse.co.bw</p>
+
+        <h2>Hours</h2>
+        <p>Mon - Fri: 08:00 - 21:00</p>
+        <p>Sat - Sun: 09:00 - 22:00</p>
+    </div>
+
+    <div class="contact-form">
+        <h2>Send Message</h2>
+
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="text" id="subject" placeholder="Subject" required>
+            <textarea id="message" placeholder="Your Message" rows="6" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <p class="note">We reply within 24 hours.</p>
+    </div>
+
+</section>
+
+<div id="popup" class="popup">
+    <p>✅ Message Sent Successfully!</p>
+</div>
+
+<footer>
+    <p>© 2026 Balebetse Refreshment</p>
+</footer>
+
+<script>
+    const form = document.getElementById("contactForm");
+    const popup = document.getElementById("popup");
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); // stop page reload
+
+        // show popup
+        popup.style.display = "block";
+
+        // hide popup after 3 seconds
+        setTimeout(() => {
+            popup.style.display = "none";
+        }, 3000);
+
+        // clear form
+        form.reset();
+    });
+</script>
+
+</body>
+</html>

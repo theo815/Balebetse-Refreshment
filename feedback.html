@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Balebetse Refreshment</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="images/SCmJo.jpg" alt="logo">
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="feedback.html">Feedback</a>
+    </nav>
+</header>
+
+<section class="page-title">
+    <h1>We Value Your Feedback</h1>
+    <p>Tell us what you think about our food and service</p>
+</section>
+
+<section class="feedback-container">
+
+    <div class="feedback-box">
+        <h2>Send Your Feedback</h2>
+
+        <form id="feedbackForm">
+
+            <input type="text" id="name" placeholder="Your Name" required>
+
+            <input type="email" id="email" placeholder="Your Email" required>
+
+            <select id="rating" required>
+                <option value="">Rate Us</option>
+                <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+                <option value="4">⭐⭐⭐⭐ Very Good</option>
+                <option value="3">⭐⭐⭐ Good</option>
+                <option value="2">⭐⭐ Fair</option>
+                <option value="1">⭐ Poor</option>
+            </select>
+
+            <textarea id="message" rows="6" placeholder="Write your feedback..." required></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+
+        <p class="note">We appreciate every comment you send ❤️</p>
+    </div>
+
+</section>
+
+<div id="popup" class="popup">
+    <p>✅ Thank you for your feedback!</p>
+</div>
+
+<footer>
+    <p>© 2026 Balebetse Refreshment | Your opinion matters</p>
+</footer>
+
+<script>
+    const form = document.getElementById("feedbackForm");
+    const popup = document.getElementById("popup");
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        popup.style.display = "block";
+
+        setTimeout(() => {
+            popup.style.display = "none";
+        }, 3000);
+
+        form.reset();
+    });
+</script>
+
+</body>
+</html>
